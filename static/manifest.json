@@ -2,7 +2,7 @@
     "name": "Roopkamal Jewellers",
     "short_name": "RJ Calci",
     "description": "Shop calculations made easy.",
-    "start_url": "/monthscalculator",
+    "start_url": "/monthcalculator",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#4285f4",
@@ -19,7 +19,7 @@
       }
     ],
     "splash_pages": null,
-    "scope": "/monthscalculator",
+    "scope": "/",
     "orientation": "portrait",
     "related_applications": [],
     "prefer_related_applications": false
