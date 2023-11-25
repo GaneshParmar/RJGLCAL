@@ -1,0 +1,27 @@
+{
+    "name": "Roopkamal Jewellers",
+    "short_name": "RJ Calci",
+    "description": "Shop calculations made easy.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4285f4",
+    "icons": [
+      {
+        "src": "/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "splash_pages": null,
+    "scope": "/",
+    "orientation": "portrait",
+    "related_applications": [],
+    "prefer_related_applications": false
+  }
+  
