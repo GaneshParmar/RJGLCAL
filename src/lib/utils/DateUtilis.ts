@@ -1,5 +1,6 @@
 import type { DMY } from '$lib/types/DMY';
 import dayjs from 'dayjs';
+import TruckOutline from '../../../node_modules/flowbite-svelte-icons/dist/TruckOutline.svelte';
 // get Number of Months
 
 export const calculateDiffBetweenDates = (
@@ -87,3 +88,11 @@ const createDateWithDayjs = (date: number, month: number, year: number): dayjs =
 	const day : dayjs = dayjs(d)
 	return day;
 };
+
+export function isValidateDates(endDate:Date,startDate:Date) {
+    if (endDate < startDate) {
+      return false;
+    } else {
+      return true;
+    }
+  }

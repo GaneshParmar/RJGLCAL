@@ -114,7 +114,7 @@
 			<div>{per_month_interest}</div>
 			
 			<div class="col-span-2">Total Number of months : </div>
-			<div>{months} months</div>
+			<div>{monthsAfterExtraDays} months</div>
 			
 			<div class="col-span-2">Principle (मूल) : </div>
 			<div>Rs {principle} </div>
