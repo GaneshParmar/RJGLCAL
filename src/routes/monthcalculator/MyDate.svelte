@@ -25,7 +25,7 @@
 	}
 </script>
 
-<span class="inline-block m-auto my-5 sm:w-50 lg:w-96">
+<span class="lg:inline-block md:m-auto m-2  lg:w-96">
 	<Input
 		type="date"
 		on:change={handleDateChanged}

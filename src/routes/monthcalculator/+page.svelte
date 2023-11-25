@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button, Input, Label, Span } from 'flowbite-svelte';
+	import { Button, Group, Input, Label, Radio, Span } from 'flowbite-svelte';
 	import MyDate from './MyDate.svelte';
 	import { calculateDiffBetweenDates } from '$lib/utils/DateUtilis';
 	import CustomSelect from './CustomSelect.svelte';
@@ -14,6 +14,7 @@
 	let months: number;
 	let days: number;
 
+	let oranmentType:string = "gold"; 
 
 
 	let formModalOpen:boolean;
@@ -33,7 +34,20 @@
 <form on:submit={calculate}>
 
 	<div class="grid gap-2 grid-cols-9 sm:grid-cols-9 m-5">
-		<!-- <div class="grid m-4 grid-cols-3 sm:grid-cols-1"> -->
+
+
+
+		<div class="grid-child col-span-9 my-5">
+			<div class="grid gap-2 grid-cols-2">
+				<div class="grid-child inline-block m-auto">
+					<Radio bind:group={oranmentType} value={"gold"} name="gold">Gold</Radio>
+				</div>
+				<div class="grid-child inline-block m-auto">
+					<Radio bind:group={oranmentType} value={"silver"} name="silver">Silver</Radio>
+				</div>
+			</div>
+
+		</div>
 		<div class="grid-child col-span-4 text-center">
 			<Label for="first_name" class="mb-2">Principle Amount(Rs)</Label>
 			<Input
@@ -62,16 +76,10 @@
 		</div>
 		<div class="grid-child col-span-4 text-center">
 			<Label for="first_name" class="mb-2">Rate Of Interest(%)</Label>
-			<CustomSelect bind:rateOfInterest />
+			<CustomSelect bind:rateOfInterest bind:oranmentType />
 		</div>
-		<div class="grid-child col-span-4 text-center">
+		<div class="grid-child col-span-9 text-center sm:col-span-4">
 			<Label tag="h4" customSize="text-4xl font-extrabold ">Start Date</Label>
-		</div>
-		<div class="col-span-1 m-auto inline-block invisible sm:visible"></div>
-		<div class="grid-child col-span-4 text-center">
-			<Label tag="h4" customSize="text-4xl font-extrabold ">End Date</Label>
-		</div>
-		<div class="grid-child col-span-4 text-center">
 			<MyDate bind:date_={startDate} startDate_={null} defaultToday={false}/>
 		</div>
 		<div class="col-span-1 m-auto inline-block invisible sm:visible">
@@ -91,7 +99,8 @@
 				/>
 			</svg>
 		</div>
-		<div class="grid-child col-span-4 text-center">
+		<div class="grid-child col-span-9 text-center sm:col-span-4">
+			<Label tag="h4" customSize="text-4xl font-extrabold ">End Date</Label>
 			<MyDate bind:date_={endDate} startDate_={startDate} defaultToday={true}/>
 		</div>
 	</div>
