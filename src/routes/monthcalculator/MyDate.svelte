@@ -7,10 +7,6 @@
 
 	let changedDate: Date | null;
 
-	const handleDateChanged = (e: Event) => {
-		// changedDate = date_;
-		// console.log(changedDate);
-	};
 
 	const changeDateToCurrent = () => {
 		const currentDate = new Date();
@@ -27,8 +23,8 @@
 
 <span class="lg:inline-block md:m-auto m-2  lg:w-96">
 	<Input
-		type="date"
-		on:change={handleDateChanged}
+		datepicker
+		type="text"
 		bind:value={date_}
 		required
 	/>
