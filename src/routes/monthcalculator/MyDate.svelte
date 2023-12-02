@@ -38,6 +38,7 @@
 		on:input={handleOnInput}
 		placeholder="dd-mm-yyyy"
 		maxLength={10}
+		inputmode="numeric"
 	/>
 	
 	<A on:click={changeDateToCurrent}>( Now )</A>

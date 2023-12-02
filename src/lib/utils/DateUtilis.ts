@@ -110,7 +110,18 @@ export function formatDate(dateValue: string) {
 
 	// Use regular expressions to add dashes in the appropriate places
 	const formatted = sanitized.replace(/(\d{2})(\d{0,2})(\d{0,4})/, (_, p1, p2, p3) => {
+		console.log(typeof(p1))
+		
+		
+		if(p1 > 31){
+			p1 = ''
+		}
+			
 		let result = p1;
+		
+		if(p2 > 12){
+			p2 = ''
+		}
 		if (p2) result += `-${p2}`;
 		if (p3) result += `-${p3}`;
 		return result;
